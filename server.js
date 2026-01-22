@@ -48,4 +48,11 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => {
   console.log("Server running");
+
+});
+app.get("/ping", (req, res) => {
+  res.json({
+    status: "ok",
+    time: new Date().toISOString()
+  });
 });
